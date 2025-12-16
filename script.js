@@ -1,30 +1,82 @@
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+// --- FUNCTIONS DEFINED GLOBALLY TO FIX CLICK BUGS ---
+
+// ROI Logic
+function toggleAssumptions() {
+    const hiddenSection = document.getElementById('roi-assumptions');
+    if (hiddenSection) {
+        hiddenSection.classList.toggle('active');
+    } else {
+        console.error('Assumptions div not found!');
+    }
 }
 
-// FAQ Toggle
+function updateROI() {
+    const fleetInput = document.getElementById('fleet-size');
+    const vehicleValueInput = document.getElementById('vehicle-value');
+    const rentalInput = document.getElementById('rental-rate');
+    const staffRateInput = document.getElementById('staff-rate');
+    const theftRateInput = document.getElementById('theft-rate');
+    const staffHoursInput = document.getElementById('staff-hours');
+    const utilizationInput = document.getElementById('utilization-rate');
+
+    // Default values if empty
+    const fleet = parseInt(fleetInput.value) || 50;
+    const vehicleValue = parseInt(vehicleValueInput.value) || 25000;
+    const dailyRate = parseInt(rentalInput.value) || 45;
+    const staffRate = parseInt(staffRateInput.value) || 15;
+    
+    // Assumptions (Dynamic)
+    const theftRate = parseFloat(theftRateInput.value) || 1; 
+    const staffHoursSaved = parseFloat(staffHoursInput.value) || 2; 
+    const utilizationIncrease = (parseFloat(utilizationInput.value) || 10) / 100;
+
+    // Calculations
+    const expectedThefts = fleet * (theftRate / 100);
+    const preventedThefts = expectedThefts * 0.80; 
+    const theftSavings = preventedThefts * vehicleValue;
+    
+    const staffSavings = staffHoursSaved * 365 * staffRate;
+    const utilizationBenefit = fleet * dailyRate * 365 * utilizationIncrease;
+    const totalBenefit = theftSavings + staffSavings + utilizationBenefit;
+    
+    // Update DOM
+    document.getElementById('theft-savings').textContent = formatMoney(theftSavings);
+    document.getElementById('staff-savings').textContent = formatMoney(staffSavings);
+    document.getElementById('utilization-benefit').textContent = formatMoney(utilizationBenefit);
+    document.getElementById('total-benefit').textContent = formatMoney(totalBenefit);
+}
+
+function formatMoney(amount) {
+    return '$' + Math.round(amount).toLocaleString();
+}
+
+// Modal Logic
+function openModal(context) {
+    const modal = document.getElementById('leadModal');
+    if(modal) {
+        modal.classList.add('active');
+        const title = document.getElementById('modalTitle');
+        if(title) title.innerText = context || "Request Demo";
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('leadModal');
+    if(modal) modal.classList.remove('active');
+}
+
+// FAQ Logic
 function toggleFAQ(element) {
-    const answer = element.querySelector('.faq-answer');
-    const icon = element.querySelector('.faq-icon');
-    
-    // Close all other FAQs
-    document.querySelectorAll('.faq-answer').forEach(item => {
-        if (item !== answer) {
-            item.classList.remove('active');
-            item.parentElement.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
-        }
+    const wasActive = element.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
     });
-    
-    // Toggle current FAQ
-    answer.classList.toggle('active');
-    icon.style.transform = answer.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+    if (!wasActive) element.classList.add('active');
 }
 
-// Toggle More FAQs
 function toggleMoreFAQs() {
-    const moreFaqs = document.getElementById('more-faqs');
+    const moreFaqs = document.getElementById('faq-more');
     const btn = document.getElementById('faq-toggle-btn');
-    
     if (moreFaqs.style.display === 'none') {
         moreFaqs.style.display = 'block';
         btn.textContent = 'Show Fewer Questions';
@@ -34,172 +86,55 @@ function toggleMoreFAQs() {
     }
 }
 
-// ROI Calculator
-const fleetInput = document.getElementById('fleet-size');
-const vehicleValueInput = document.getElementById('vehicle-value');
-const rentalInput = document.getElementById('rental-rate');
-const theftRateInput = document.getElementById('theft-rate');
-const staffHoursInput = document.getElementById('staff-hours');
-const staffRateInput = document.getElementById('staff-rate');
-const disputesInput = document.getElementById('disputes');
-
-function updateROI() {
-    const fleet = parseInt(fleetInput.value) || 50;
-    const vehicleValue = parseInt(vehicleValueInput.value) || 25000;
-    const dailyRate = parseInt(rentalInput.value) || 45;
-    const theftRate = parseFloat(theftRateInput.value) || 1;
-    const staffHours = parseFloat(staffHoursInput.value) || 2;
-    const staffRate = parseInt(staffRateInput.value) || 15;
-    const disputes = parseInt(disputesInput.value) || 5;
-    
-    // 1. THEFT PREVENTION
-    const expectedThefts = fleet * (theftRate / 100);
-    const preventedThefts = expectedThefts * 0.80;
-    const theftSavings = preventedThefts * vehicleValue;
-    
-    // 2. STAFF TIME SAVINGS
-    const staffSavings = staffHours * 365 * staffRate;
-    
-    // 3. UTILIZATION INCREASE
-    const utilizationBenefit = fleet * dailyRate * 365 * 0.10;
-    
-    // 4. DISPUTE REDUCTION
-    const disputeSavings = disputes * 0.80 * 500;
-    
-    // TOTAL BENEFITS
-    const totalBenefit = theftSavings + staffSavings + utilizationBenefit + disputeSavings;
-    
-    // COSTS (IturanMob Full)
-    const setupCost = fleet * 149.99;
-    const subscriptionCost = fleet * 24.99 * 12;
-    const totalCost = setupCost + subscriptionCost;
-    
-    // NET BENEFIT & ROI
-    const netBenefit = totalBenefit - totalCost;
-    const roi = (netBenefit / totalCost * 100).toFixed(0);
-    
-    // UPDATE DISPLAY
-    document.getElementById('theft-savings').textContent = '+$' + Math.round(theftSavings).toLocaleString();
-    document.getElementById('staff-savings').textContent = '+$' + Math.round(staffSavings).toLocaleString();
-    document.getElementById('utilization-benefit').textContent = '+$' + Math.round(utilizationBenefit).toLocaleString();
-    document.getElementById('dispute-savings').textContent = '+$' + Math.round(disputeSavings).toLocaleString();
-    document.getElementById('total-benefit').textContent = '$' + Math.round(totalBenefit).toLocaleString();
-    document.getElementById('setup-cost').textContent = '$' + Math.round(setupCost).toLocaleString();
-    document.getElementById('subscription-cost').textContent = '$' + Math.round(subscriptionCost).toLocaleString() + '/year';
-    document.getElementById('annual-cost').textContent = '$' + Math.round(totalCost).toLocaleString();
-    document.getElementById('net-benefit').textContent = '$' + Math.round(netBenefit).toLocaleString();
-    document.getElementById('roi-percent').textContent = roi + '%';
+function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if(element) element.scrollIntoView({ behavior: 'smooth' });
 }
 
-// Add event listeners to all inputs
-fleetInput.addEventListener('input', updateROI);
-vehicleValueInput.addEventListener('input', updateROI);
-rentalInput.addEventListener('input', updateROI);
-theftRateInput.addEventListener('input', updateROI);
-staffHoursInput.addEventListener('input', updateROI);
-staffRateInput.addEventListener('input', updateROI);
-disputesInput.addEventListener('input', updateROI);
-
-// Form submission
-function handleFormSubmit(event) {
-    event.preventDefault();
-    alert('Thank you for your interest! We will contact you shortly to schedule your demo.');
-    event.target.reset();
-}
-
-// Open first FAQ by default
+// --- EVENT LISTENERS ---
 document.addEventListener('DOMContentLoaded', function() {
-    const firstFAQ = document.querySelectorAll('.faq-question')[0];
-    if (firstFAQ) {
-        toggleFAQ(firstFAQ.parentElement);
+    // Navigation
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', function() {
+            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+            if(navMenu.style.display === 'flex') {
+                navMenu.style.flexDirection = 'column';
+                navMenu.style.position = 'absolute';
+                navMenu.style.top = '70px';
+                navMenu.style.left = '0';
+                navMenu.style.width = '100%';
+                navMenu.style.backgroundColor = '#0c1c33';
+                navMenu.style.padding = '2rem';
+            }
+        });
     }
-    updateROI();
-});
 
-// ========== INTEREST MODAL FUNCTIONS ==========
-
-function openInterestModal(planName, planPrice) {
-    const modal = document.getElementById('interestModal');
-    const modalPlanName = document.getElementById('modalPlanName');
-    const selectedPlanInput = document.getElementById('selectedPlan');
-    
-    // Set plan name in modal title and hidden input
-    modalPlanName.textContent = planName;
-    selectedPlanInput.value = `${planName} (${planPrice})`;
-    
-    // Show modal
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
-}
-
-function closeInterestModal() {
-    const modal = document.getElementById('interestModal');
-    modal.classList.remove('active');
-    document.body.style.overflow = ''; // Restore scrolling
-    
-    // Reset form
-    document.getElementById('interestForm').reset();
-}
-
-function handleInterestSubmit(event) {
-    event.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(event.target);
-    const data = Object.fromEntries(formData.entries());
-    
-    // Log data (in production, send to your backend)
-    console.log('Lead submitted:', data);
-    
-    // TODO: Send data to your backend/CRM
-    // Example:
-    // fetch('/api/leads', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify(data)
-    // });
-    
-    // Close interest modal
-    closeInterestModal();
-    
-    // Show success modal
-    showSuccessModal(data.selectedPlan, data.email);
-}
-
-function showSuccessModal(planName, email) {
-    const successModal = document.getElementById('successModal');
-    const successPlanName = document.getElementById('successPlanName');
-    const successEmail = document.getElementById('successEmail');
-    
-    successPlanName.textContent = planName;
-    successEmail.textContent = email;
-    
-    successModal.classList.add('active');
-}
-
-function closeSuccessModal() {
-    const modal = document.getElementById('successModal');
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-}
-
-// Close modal when clicking outside
-window.onclick = function(event) {
-    const interestModal = document.getElementById('interestModal');
-    const successModal = document.getElementById('successModal');
-    
-    if (event.target === interestModal) {
-        closeInterestModal();
+    // Modal Close Click
+    window.onclick = function(event) {
+        const modal = document.getElementById('leadModal');
+        if (event.target === modal) closeModal();
     }
-    if (event.target === successModal) {
-        closeSuccessModal();
-    }
-}
 
-// Close modal with Escape key
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        closeInterestModal();
-        closeSuccessModal();
+    // Initialize ROI Listeners
+    const allInputs = [
+        document.getElementById('fleet-size'),
+        document.getElementById('vehicle-value'),
+        document.getElementById('rental-rate'),
+        document.getElementById('staff-rate'),
+        document.getElementById('theft-rate'),
+        document.getElementById('staff-hours'),
+        document.getElementById('utilization-rate')
+    ];
+
+    allInputs.forEach(input => {
+        if(input) input.addEventListener('input', updateROI);
+    });
+
+    // Initial Run
+    if(document.getElementById('fleet-size')) {
+        updateROI();
     }
 });

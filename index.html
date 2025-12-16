@@ -3,898 +3,472 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IturanMob USA - Vehicle Sharing Platform for Rental Companies & Fleets</title>
-    <meta name="description" content="White-label vehicle sharing platform trusted by rental companies, OEMs, and fleet operators. Contactless, automated, and fully branded.">
-    
-    <!-- External Stylesheet -->
+    <title>IturanMob | Enterprise Mobility Platform & Fleet Security</title>
+    <meta name="description" content="The complete platform for rental, gig-economy, and corporate fleets. Hardware, software, and stolen vehicle recovery in one solution.">
     <link rel="stylesheet" href="styles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- NAVIGATION -->
+
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">ITURANMOB</div>
+        <div class="container nav-container">
+            <div class="logo">ituran<span>mob</span></div>
             <ul class="nav-menu">
-                <li class="dropdown">
-                    <a href="#solutions">Solutions ▼</a>
-                    <div class="dropdown-content">
-                        <a href="#rental">Rental Companies</a>
-                        <a href="#corporate">Corporate Fleets</a>
-                        <a href="#oem">OEM Test Drives</a>
-                        <a href="#subscriptions">Subscriptions</a>
-                    </div>
-                </li>
-                <li><a href="#technology">Technology</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#roi">ROI</a></li>
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#faq">Resources</a></li>
-                <li><a href="#demo" class="btn-primary">Schedule Demo</a></li>
+                <li><a href="#contact" class="btn btn-primary" onclick="openModal('General Inquiry')">Request Demo</a></li>
             </ul>
             <div class="mobile-toggle">☰</div>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
     <section class="hero">
-        <!-- Video Background -->
-        <video autoplay muted loop playsinline class="hero-video">
+        <video autoplay muted loop playsinline class="hero-bg-video">
             <source src="hero-video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
-        
-        <div class="hero-content">
-            <h1>Stop Managing Keys. <span class="hero-highlight">Start Managing Revenue.</span></h1>
-            <p>The keyless rental platform used by 1,000+ vehicles across 7 countries. Automate everything from booking to return.</p>
-            <div class="hero-buttons">
-                <button class="btn-primary" onclick="scrollToSection('demo')">Schedule Demo</button>
-            </div>
-        </div>
-    </section>
 
-    <!-- TRUST BAR -->
-    <section class="trust-bar">
-        <h3>Trusted By Industry Leaders</h3>
-        <div class="logo-grid">
-            <div class="customer-logo">Customer Logo</div>
-            <div class="customer-logo">Customer Logo</div>
-            <div class="customer-logo">Customer Logo</div>
-            <div class="customer-logo">Customer Logo</div>
-            <div class="customer-logo">Customer Logo</div>
-        </div>
-        <div class="stats">
-            <div class="stat">
-                <div class="stat-number">7</div>
-                <div class="stat-label">Countries</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">1000+</div>
-                <div class="stat-label">Vehicles Under Management</div>
-            </div>
-            <div class="stat">
-                <div class="stat-number">2019</div>
-                <div class="stat-label">Since (Ituran since 1995)</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROBLEM/SOLUTION -->
-    <section class="section">
         <div class="container">
-            <div class="problem-solution">
-                <div class="problem-box">
-                    <h3>✗ Traditional Fleet Operations Are Costly and Complex</h3>
-                    <ul>
-                        <li>Key management creates bottlenecks and security risks</li>
-                        <li>Manual check-in/check-out wastes staff time and frustrates customers</li>
-                        <li>Payment processing requires separate integrations and vendor management</li>
-                    </ul>
-                </div>
-                <div class="solution-box">
-                    <h3>✓ IturanMob Automates Everything—Completely Contactless</h3>
-                    <ul>
-                        <li>Keyless entry via smartphone—no physical key management</li>
-                        <li>Automated booking, KYC, and damage inspection through mobile app</li>
-                        <li>Built-in payment processing handles all billing automatically—one less vendor to manage</li>
-                    </ul>
+            <div class="hero-content text-center">
+                <h1>The Enterprise-Grade Mobility Platform.</h1>
+                <p>Hardware, Software, and Security in one unified solution. Trusted by rental companies, gig-economy fleets, and OEMs worldwide.</p>
+                <div class="hero-btns">
+                    <button class="btn btn-primary" onclick="scrollToSection('how-it-works')">Watch Platform Demo</button>
+                    <button class="btn btn-secondary" style="border-color: #fff; color: #fff;" onclick="scrollToSection('pricing')">View Pricing</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="section section-dark" id="how-it-works">
+    <div class="stats-bar">
         <div class="container">
-            <div class="section-header">
-                <h2>How It Works: Simple, Secure, Seamless</h2>
-            </div>
-            <div class="steps-grid">
-                <div class="step-card">
-                    <div class="step-number">1</div>
-                    <h4>Book a Vehicle</h4>
-                    <div class="step-image">Booking Screen</div>
-                    <p>Users find available vehicles on a map or browse your fleet catalog. They select pickup/drop-off times and complete their reservation in seconds.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Countries</div>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">2</div>
-                    <h4>Unlock with Smartphone</h4>
-                    <div class="step-image">Unlock & KYC Screen</div>
-                    <p>At pickup time, users verify their identity (KYC with driver's license photo) and unlock the vehicle doors via Bluetooth—no keys, no counter, no waiting.</p>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Vehicles Under Management</div>
                 </div>
-                <div class="step-card">
-                    <div class="step-number">3</div>
-                    <h4>Drive & Monitor</h4>
-                    <div class="step-image">Tracking Dashboard</div>
-                    <p>During the trip, you track real-time location, speed, fuel/battery levels, and more. Users can drive with or without the physical key.</p>
-                </div>
-                <div class="step-card">
-                    <div class="step-number">4</div>
-                    <h4>Return & Inspect</h4>
-                    <div class="step-image">Inspection Screen</div>
-                    <p>At drop-off, the app guides users through a damage inspection (photos), verifies the vehicle is returned to the correct location, and ends the trip automatically.</p>
+                <div class="stat-item">
+                    <div class="stat-number">2019</div>
+                    <div class="stat-label">Since (Ituran since 1995)</div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- USE CASES -->
-    <section class="section" id="solutions">
+    <section id="solutions" class="solutions">
         <div class="container">
             <div class="section-header">
                 <h2>Built for Your Business Model</h2>
-                <p>Whether you run daily rentals, manage ride-share fleets, or oversee corporate vehicles—IturanMob adapts to your operation.</p>
+                <p>Whether you rent, share, or manage internal fleets, our modular platform adapts to your operations.</p>
             </div>
-            <div class="use-cases-grid" style="grid-template-columns: repeat(3, 1fr);">
-                <div class="use-case-card">
-                    <div class="use-case-icon">🚗</div>
-                    <h3>Rental Companies</h3>
-                    <p>Eliminate counter operations with a fully contactless rental experience. From booking to return, everything happens through your branded app.</p>
-                    <ul>
-                        <li>Integrated KYC and identity verification</li>
-                        <li>Automated damage inspection (before/after)</li>
-                    </ul>
-                    <a href="#" class="learn-more">Learn More →</a>
+            
+            <div class="cards-grid">
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="solution-rental.jpg" 
+                             alt="Contactless Car Rental Experience" 
+                             width="800" height="400">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                       
+                        <h3>Rental Companies</h3>
+                        <p>The "Contactless Counter" experience. Automate your rental operations from booking to return.</p>
+                        <ul class="feature-list">
+                            <li>Digital contract signature</li>
+                            <li>Automated damage inspection</li>
+                            <li>Pre/Post rental checklists</li>
+                            <li>Flexible billing options</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🚙</div>
-                    <h3>Ride-Share & Gig Economy</h3>
-                    <p>Flexible vehicle subscriptions for drivers on platforms like Uber, Lyft, DoorDash, and Instacart. From 1 day to long-term—adapt to driver demand dynamically.</p>
-                    <ul>
-                        <li>Daily, weekly, or monthly subscriptions</li>
-                        <li>Quick approval and digital onboarding</li>
-                    </ul>
-                    <a href="#" class="learn-more">Learn More →</a>
+
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="solution-gig.jpg" 
+                             alt="Gig Economy Vehicle at Night" 
+                             width="800" height="400">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                       
+                        <h3>Gig-Economy</h3>
+                        <p>Vehicle-as-a-Service for ride-share and delivery drivers. Flexible subscriptions.</p>
+                        <ul class="feature-list">
+                            <li>Daily/Weekly billing automation</li>
+                            <li>Stripe/Pagar.me payment integration</li>
+                            <li>Driver verification & onboarding</li>
+                            <li>Auto-block for payment default</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="use-case-card">
-                    <div class="use-case-icon">🏢</div>
-                    <h3>Corporate & OEM Fleets</h3>
-                    <p>From employee vehicle booking to dealer test drives—manage diverse fleet operations with one platform.</p>
-                    <ul>
-                        <li>Multi-level booking approval workflows</li>
-                        <li>Lead capture and driving analytics</li>
-                    </ul>
-                    <a href="#" class="learn-more">Learn More →</a>
+
+                <div class="solution-card">
+                    <div class="card-image">
+                        <img src="solution-corporate.jpg" 
+                             alt="Corporate Fleet Management" 
+                             width="800" height="400">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="card-content">
+                       
+                        <h3>Corporate Fleets</h3>
+                        <p>Maximize utilization and reduce fleet size with internal car-sharing pools.</p>
+                        <ul class="feature-list">
+                            <li>Department cost centers</li>
+                            <li>Manager approval workflows</li>
+                            <li>Pool optimization</li>
+                            <li>Employee app access</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- TECHNOLOGY -->
-    <section class="section section-dark" id="technology">
+    <section id="how-it-works" class="process-section">
+        <div class="container">
+            <div class="process-grid">
+                <div class="process-content">
+                    <h2>From Booking to Drop-off. <br><span class="text-teal">Fully Automated.</span></h2>
+                    <p>See how the platform handles the entire rental lifecycle without a single key exchange.</p>
+                    <div class="step-list">
+                        <div class="step-item">
+                            <div class="step-number">1</div>
+                            <div><h4>Book & Verify</h4><p>User selects a vehicle and verifies ID (KYC) via the white-label app.</p></div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">2</div>
+                            <div><h4>Unlock via Bluetooth</h4><p>User unlocks doors instantly using the app. Works offline in garages.</p></div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">3</div>
+                            <div><h4>Drive & Monitor</h4><p>You track location, fuel, and speed in real-time on your dashboard.</p></div>
+                        </div>
+                        <div class="step-item">
+                            <div class="step-number">4</div>
+                            <div><h4>Return & Inspect</h4><p>User snaps photos for damage check. Trip ends and car locks automatically.</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-video-wrapper">
+                    <div class="video-play-overlay" onclick="document.querySelector('.demo-video').play(); this.style.display='none';">
+                        <div class="play-icon">▶</div>
+                    </div>
+                    <video controls class="demo-video" poster="demo-poster.jpg">
+                        <source src="FAST_RENTAL_EN_V2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p class="video-caption">Watch the end-to-end rental experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="security" class="security-section">
+        <div class="container security-grid">
+            <div class="security-content">
+                <div class="security-badge">Security Advantage</div>
+                <h2>Hardwired Security. Active Prevention.</h2>
+                <p>Most competitors use OBD "Dongles" that thieves simply unplug in seconds. IturanMob uses <strong>covert, hardwired installation</strong> designed to be undetectable and tamper-resistant.</p>
+                <ul style="margin-top: 2rem;">
+                    <li style="margin-bottom: 1rem; display: flex; align-items: center;">
+                        <span style="color: #96c93e; font-size: 1.2rem; margin-right: 1rem;">🛡️</span>
+                        <div><strong>Remote Immobilization</strong><div style="font-size: 0.9rem; opacity: 0.8;">Safely cut the engine ignition remotely if a vehicle is stolen or payment is defaulted.</div></div>
+                    </li>
+                    <li style="margin-bottom: 1rem; display: flex; align-items: center;">
+                        <span style="color: #96c93e; font-size: 1.2rem; margin-right: 1rem;">👁️</span>
+                        <div><strong>Covert Installation</strong><div style="font-size: 0.9rem; opacity: 0.8;">Hidden deep in the dashboard with no visible lights or ports. Hardwired means it stays connected.</div></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="architecture-wrapper">
+                <img src="./architecture-diagram.jpg" 
+                alt="IturanMob System Architecture: Vehicle to Cloud to App"
+                width="800" height="600">
+            </div>
+        </div>
+    </section>
+
+    <section id="roi" class="roi-section">
         <div class="container">
             <div class="section-header">
-                <h2>Your Brand, Our Technology</h2>
-                <p>Choose how to integrate: white-label apps, API, or no-app solution.</p>
-            </div>
-            <div class="integration-options">
-                <div class="integration-card">
-                    <h3>API + Your App</h3>
-                    <div class="integration-image">🔌 API Icon</div>
-                    <h4>Custom Integration</h4>
-                    <p>Already have an app? Integrate our API and BLE libraries to add vehicle sharing capabilities to your existing platform.</p>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);"><strong>Best For:</strong> Companies with existing apps</p>
-                </div>
-                <div class="integration-card popular">
-                    <div class="popular-badge">MOST POPULAR</div>
-                    <h3>White-Label Apps</h3>
-                    <div class="integration-image">📱 App Icon</div>
-                    <h4>Complete Solution</h4>
-                    <p>We provide fully-branded iOS and Android apps with your logo, colors, and business logic. Launch in weeks, not months.</p>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);"><strong>Best For:</strong> Rental companies, fleet operators who want a complete solution</p>
-                </div>
-                <div class="integration-card">
-                    <h3>No-App Solution</h3>
-                    <div class="integration-image">🌐 Web Icon</div>
-                    <h4>Browser-Based</h4>
-                    <p>Send web links via SMS or email. Customers unlock vehicles through their mobile browser—no app download required.</p>
-                    <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--gray);"><strong>Best For:</strong> Corporate fleets, simplified operations</p>
-                </div>
-            </div>
-
-            <div class="architecture-diagram">
-                <h3 style="text-align: center; margin-bottom: 2rem;">How It All Connects</h3>
-                <div class="architecture-image">
-                    System Architecture Diagram<br>
-                    <small>(Vehicle → 4G/BLE → AWS Cloud → Apps/Dashboard)</small>
-                </div>
-                <div class="tech-callouts">
-                    <span>🔒 VPN-Encrypted 4G Connectivity</span>
-                    <span>☁️ AWS Hosted (Secure & Scalable)</span>
-                    <span>📱 BLE Works Offline</span>
-                </div>
-            </div>
-
-            <div class="tech-features">
-                <div class="tech-feature">
-                    <h4>✓ Real-Time Vehicle Telematics</h4>
-                    <p>Access live data from the vehicle CAN bus: odometer, speed, RPM, fuel level, battery SOC, remaining range, door status, charging status, and more.</p>
-                </div>
-                <div class="tech-feature">
-                    <h4>✓ Multi-Channel Communication</h4>
-                    <p>Vehicle devices communicate via BLE (for offline operation), SMS (backup), and 4G internet (primary). Redundancy ensures reliability.</p>
-                </div>
-                <div class="tech-feature">
-                    <h4>✓ Security & Theft Prevention</h4>
-                    <p>GPS tracking, geofencing, remote immobilization, towing alerts, unauthorized movement detection. Optional integration with Ituran's world-class stolen vehicle recovery (SVR) service.</p>
-                </div>
+                <h2>Calculate Your Potential Savings</h2>
+                <p>See how much you can save by automating operations and preventing theft.</p>
             </div>
             
-            <!-- Partner Ecosystem -->
-            <div class="partner-ecosystem">
-                <h3>Partner Ecosystem</h3>
-                <p class="intro">IturanMob integrates seamlessly with leading platforms and services to provide complete fleet management solutions.</p>
-                
-                <div class="partner-grid">
-                    <div class="partner-card">
-                        <div class="partner-card-logos">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Turo" style="height: 35px; background: #f0f0f0; padding: 8px; border-radius: 6px;">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt="Tint" style="height: 35px; background: #f0f0f0; padding: 8px; border-radius: 6px;">
-                        </div>
-                        <div class="partner-card-content">
-                            <h4>🛡️ Tint-Approved for Turo Hosts</h4>
-                            <p>IturanMob is a Tint-approved solution, making it compatible with off-trip car insurance designed for Turo hosts.</p>
-                            <ul>
-                                <li>Coverage when vehicle is not rented</li>
-                                <li>Seamless integration with Tint policies</li>
-                                <li>Peace of mind for your fleet</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <div class="partner-card">
-                        <div class="partner-card-content" style="width: 100%;">
-                            <h4>🔌 Additional Integrations</h4>
-                            <p>Connect with your existing tools and workflows:</p>
-                            <ul>
-                                <li>Payment gateways (Stripe, others)</li>
-                                <li>Rental ERPs (Locavia and more)</li>
-                                <li>Accounting systems</li>
-                                <li>Custom API integrations</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MOBILE APP SHOWCASE -->
-    <section class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>See It in Action</h2>
-                <p>Watch how IturanMob transforms the rental experience</p>
-            </div>
-            <div class="app-showcase">
-                <div style="text-align: center; padding: 3rem;">
-                    <div style="max-width: 800px; margin: 0 auto; background: rgba(0,0,0,0.3); padding: 3rem; border-radius: 12px;">
-                        <div style="background: rgba(255,255,255,0.1); height: 400px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-direction: column; color: white; border: 2px dashed rgba(255,255,255,0.3);">
-                            <div style="font-size: 4rem; margin-bottom: 1rem;">▶️</div>
-                            <h3 style="color: white; margin-bottom: 0.5rem;">Platform Demo Video</h3>
-                            <p style="opacity: 0.8; margin-bottom: 1.5rem;">See the complete customer journey (2 minutes)</p>
-                            <button class="btn-primary">Watch Demo</button>
-                        </div>
-                        <p style="color: white; margin-top: 2rem; opacity: 0.7; font-size: 0.9rem;">
-                            See real bookings, KYC verification, keyless unlock, and damage inspection in action
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PRICING -->
-    <section class="section section-dark" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <h2>Choose Your Plan</h2>
-                <p>Simple, predictable pricing that scales with your fleet.</p>
-            </div>
-            <div class="pricing-cards">
-                <!-- Light -->
-                <div class="pricing-card">
-                    <div class="pricing-label">Entry Level</div>
-                    <div class="pricing-name">IturanMob Light</div>
-                    <div class="pricing-amount">$5.99</div>
-                    <div class="pricing-period">Per vehicle per month</div>
-                    <div class="pricing-setup"><strong>Device:</strong> $59.99 (one-time)</div>
-                    <hr>
-                    <ul>
-                        <li>Admin portal & dashboard</li>
-                        <li>GPS tracking (daily updates)</li>
-                        <li>On-demand location requests</li>
-                        <li><strong>Remote immobilization</strong></li>
-                        <li class="excluded">Real-time tracking (10min)</li>
-                        <li class="excluded">Keyless lock/unlock</li>
-                        <li class="excluded">Geofencing</li>
-                        <li class="excluded">Vehicle telemetry</li>
-                        <li class="excluded">Mobile app / Booking CRM</li>
-                    </ul>
-                    <div class="pricing-note">
-                        <strong>Note:</strong> Location updates once per day. On-demand requests available anytime via admin portal.
-                    </div>
-                    <div class="pricing-note" style="background: #e8f5f7; border-color: #00A8B8;">
-                        <strong>Best For:</strong> Basic fleet tracking
-                    </div>
-                    <button class="pricing-cta" onclick="openInterestModal('IturanMob Light', '$5.99/month')">I'm Interested</button>
-                </div>
-                
-                <!-- Gold -->
-                <div class="pricing-card">
-                    <div class="pricing-label">Professional</div>
-                    <div class="pricing-name">IturanMob Gold</div>
-                    <div class="pricing-amount">$8.99</div>
-                    <div class="pricing-period">Per vehicle per month</div>
-                    <div class="pricing-setup"><strong>Device:</strong> $159.99 (one-time)</div>
-                    <hr>
-                    <ul>
-                        <li>Admin portal & dashboard</li>
-                        <li><strong>GPS tracking (every 10 minutes)</strong></li>
-                        <li>On-demand location requests</li>
-                        <li><strong>Remote immobilization</strong></li>
-                        <li><strong>Keyless lock/unlock doors</strong></li>
-                        <li class="excluded">Geofencing & zone alerts</li>
-                        <li class="excluded">Vehicle telemetry data</li>
-                        <li class="excluded">White-label mobile app</li>
-                        <li class="excluded">Booking system / CRM</li>
-                    </ul>
-                    <div class="pricing-note" style="background: #e8f5f7; border-color: #00A8B8;">
-                        <strong>Best For:</strong> Contactless rentals
-                    </div>
-                    <button class="pricing-cta" onclick="openInterestModal('IturanMob Gold', '$8.99/month')">I'm Interested</button>
-                </div>
-                
-                <!-- Full -->
-                <div class="pricing-card">
-                    <div class="pricing-badge" style="background: var(--navy);">MOST COMPLETE</div>
-                    <div class="pricing-label">Complete Platform</div>
-                    <div class="pricing-name">IturanMob Full</div>
-                    <div class="pricing-amount">$24.99</div>
-                    <div class="pricing-period">Per vehicle per month</div>
-                    <div class="pricing-setup"><strong>Device:</strong> $149.99 (one-time)</div>
-                    <hr>
-                    <ul>
-                        <li><strong>Everything in Gold, plus:</strong></li>
-                        <li><strong>Advanced geofencing & zone alerts</strong></li>
-                        <li><strong>Full vehicle telemetry (CAN bus)</strong></li>
-                        <li><strong>White-label app (mobile OR web-based)</strong></li>
-                        <li><strong>Integrated booking system & CRM</strong></li>
-                        <li>KYC & damage inspection</li>
-                        <li>Payment processing integration</li>
-                    </ul>
-                    <div class="pricing-note">
-                        <strong>App Options:</strong> Choose native mobile apps (iOS/Android) or web-based app (no download required).
-                    </div>
-                    <div class="pricing-note" style="background: #e8f5f7; border-color: #00A8B8;">
-                        <strong>Best For:</strong> Automated rental platform
-                    </div>
-                    <button class="pricing-cta" onclick="openInterestModal('IturanMob Full', '$24.99/month')">I'm Interested</button>
-                </div>
-            </div>
-            
-            <!-- Tint Insurance Protection Note -->
-            <div style="max-width: 900px; margin: 3rem auto 2rem; background: linear-gradient(135deg, #e8f5f7 0%, #f0f9fa 100%); border: 2px solid #00A8B8; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 12px rgba(0, 212, 197, 0.15);">
-                <div style="display: flex; align-items: start; gap: 1.5rem;">
-                    <div style="font-size: 3rem; flex-shrink: 0;">🛡️</div>
-                    <div style="flex: 1;">
-                        <h3 style="color: var(--navy); margin-bottom: 0.75rem; font-size: 1.5rem;">Insurance Protection Available</h3>
-                        <p style="color: var(--dark-gray); line-height: 1.7; margin-bottom: 1rem;">
-                            All IturanMob tiers are compatible with <strong>Tint off-trip insurance</strong>—designed for Turo hosts and rental operators who need coverage when vehicles aren't in use.
-                        </p>
-                        <a href="#" style="display: inline-flex; align-items: center; gap: 0.5rem; color: #00A8B8; font-weight: 600; text-decoration: none; transition: gap 0.3s;">
-                            Learn More About Coverage 
-                            <span style="transition: transform 0.3s;">→</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 2.5rem; padding: 2rem; background: white; border-radius: 12px; max-width: 800px; margin-left: auto; margin-right: auto;">
-                <p style="color: var(--gray); font-size: 0.95rem; margin-bottom: 1rem;">
-                    <strong>Note:</strong> Installation not included. Taxes and shipping not included in device pricing.
-                </p>
-                <div style="background: linear-gradient(135deg, var(--navy), #2A3F5A); color: white; padding: 2rem; border-radius: 8px;">
-                    <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 0.5rem;">Managing 50+ Vehicles?</div>
-                    <p style="margin-bottom: 1.5rem; opacity: 0.9;">Let's discuss custom pricing and enterprise features tailored to your operation.</p>
-                    <button class="btn-primary" onclick="scrollToSection('demo')">Talk to Sales</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ROI CALCULATOR -->
-    <section class="roi-calculator">
-        <div class="container">
-            <h2>Calculate Your Return on Investment</h2>
-            <p class="subtitle">Adjust the assumptions below based on your operation</p>
-            
-            <div class="roi-content">
+            <div class="roi-wrapper">
                 <div class="roi-inputs">
-                    <div class="roi-input-group">
-                        <label>
-                            Fleet Size
-                        </label>
-                        <input type="number" id="fleet-size" value="50" min="1" max="1000">
+                    <h3>Your Fleet Details</h3>
+                    <div class="input-group">
+                        <label>Fleet Size</label>
+                        <input type="number" id="fleet-size" value="50">
                     </div>
-                    
-                    <div class="roi-input-group">
-                        <label>
-                            Average Vehicle Value
-                        </label>
-                        <input type="number" id="vehicle-value" value="25000" min="5000" step="1000">
+                    <div class="input-group">
+                        <label>Avg. Vehicle Value ($)</label>
+                        <input type="number" id="vehicle-value" value="25000">
                     </div>
-                    
-                    <div class="roi-input-group">
-                        <label>
-                            Average Daily Rental Rate
-                        </label>
-                        <input type="number" id="rental-rate" value="45" min="10" step="5">
+                    <div class="input-group">
+                        <label>Daily Rental Rate ($)</label>
+                        <input type="number" id="rental-rate" value="45">
                     </div>
-                    
-                    <div class="roi-input-group">
-                        <label>
-                            Current Theft Rate
-                            <span class="hint">(% of fleet/year)</span>
-                        </label>
-                        <input type="number" id="theft-rate" value="1" min="0" max="10" step="0.1">
+                    <div class="input-group">
+                        <label>Staff Hourly Rate ($)</label>
+                        <input type="number" id="staff-rate" value="15">
                     </div>
-                    
-                    <div class="roi-input-group">
-                        <label>
-                            Staff Hours/Day on Key Mgmt
-                        </label>
-                        <input type="number" id="staff-hours" value="2" min="0" max="8" step="0.5">
-                    </div>
-                    
-                    <div class="roi-input-group">
-                        <label>
-                            Average Staff Hourly Rate
-                        </label>
-                        <input type="number" id="staff-rate" value="15" min="10" max="50">
-                    </div>
-                    
-                    <div class="roi-input-group">
-                        <label>
-                            Damage Disputes/Year
-                            <span class="hint">@ $500 avg</span>
-                        </label>
-                        <input type="number" id="disputes" value="5" min="0" max="100">
+
+                    <button class="btn-text-toggle" onclick="toggleAssumptions()">Customize Assumptions ▾</button>
+
+                    <div id="roi-assumptions" class="roi-hidden-inputs">
+                        <div class="input-group">
+                            <label>Theft Rate (% per year)</label>
+                            <input type="number" id="theft-rate" value="1" step="0.1">
+                        </div>
+                        <div class="input-group">
+                            <label>Staff Hours Saved (per day)</label>
+                            <input type="number" id="staff-hours" value="2" step="0.5">
+                        </div>
+                        <div class="input-group">
+                            <label>Utilization Increase (%)</label>
+                            <input type="number" id="utilization-rate" value="10" step="1">
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="roi-results">
-                    <h3>Estimated Annual Savings</h3>
+                    <h3>Estimated Annual Benefit</h3>
                     
                     <div class="roi-row">
-                        <div class="roi-row-label">
-                            <strong>Prevent Theft</strong>
-                            <div class="description">Reduce theft by 80% with GPS tracking & immobilization</div>
-                        </div>
-                        <div class="roi-row-value" id="theft-savings">$10,000</div>
+                        <span>🛡️ Theft Prevention</span>
+                        <strong class="text-green" id="theft-savings">$0</strong>
+                    </div>
+                    <div class="roi-row">
+                        <span>⚡ Operational Efficiency</span>
+                        <strong class="text-green" id="staff-savings">$0</strong>
+                    </div>
+                    <div class="roi-row">
+                        <span>📈 Increased Utilization</span>
+                        <strong class="text-green" id="utilization-benefit">$0</strong>
                     </div>
                     
-                    <div class="roi-row">
-                        <div class="roi-row-label">
-                            <strong>Reduce Staff Time</strong>
-                            <div class="description">Eliminate manual key management</div>
-                        </div>
-                        <div class="roi-row-value" id="staff-savings">$10,950</div>
-                    </div>
+                    <hr style="border-color: rgba(0,0,0,0.1); margin: 1.5rem 0;">
                     
-                    <div class="roi-row">
-                        <div class="roi-row-label">
-                            <strong>Increase Utilization</strong>
-                            <div class="description">10% more rental days via faster turnaround</div>
-                        </div>
-                        <div class="roi-row-value" id="utilization-benefit">$82,125</div>
+                    <div class="roi-total">
+                        <span>Total Annual Value</span>
+                        <div class="roi-big-number" id="total-benefit">$0</div>
                     </div>
-                    
-                    <div class="roi-row">
-                        <div class="roi-row-label">
-                            <strong>Reduce Damage Disputes</strong>
-                            <div class="description">Photo inspection eliminates 80% of disputes</div>
-                        </div>
-                        <div class="roi-row-value" id="dispute-savings">$2,000</div>
-                    </div>
-                </div>
-                
-                <div class="roi-totals">
-                    <div class="roi-total-row">
-                        <span>Total Annual Benefit:</span>
-                        <span id="total-benefit">$105,075</span>
-                    </div>
-                    <div class="roi-total-row">
-                        <span>Your Annual Cost (IturanMob Full):</span>
-                        <span id="annual-cost">$15,294</span>
-                    </div>
-                    <div class="roi-total-row" style="font-size: 1rem; color: var(--gray);">
-                        <span style="padding-left: 2rem;">→ Setup (Year 1 only):</span>
-                        <span id="setup-cost">$7,500</span>
-                    </div>
-                    <div class="roi-total-row" style="font-size: 1rem; color: var(--gray);">
-                        <span style="padding-left: 2rem;">→ Subscription (recurring):</span>
-                        <span id="subscription-cost">$14,994/year</span>
-                    </div>
-                    <div class="roi-total-row highlight">
-                        <span>Net Benefit (Year 1):</span>
-                        <span id="net-benefit">$82,281</span>
-                    </div>
-                    <div class="roi-total-row highlight">
-                        <span>ROI:</span>
-                        <span id="roi-percent">538%</span>
-                    </div>
-                </div>
-                
-                <div class="roi-assumptions">
-                    <strong>Assumptions:</strong>
-                    <p>• 80% theft reduction with GPS tracking & remote immobilization</p>
-                    <p>• 100% elimination of key management time with keyless entry</p>
-                    <p>• 10% utilization increase through faster turnaround & reduced downtime</p>
-                    <p>• 80% reduction in damage disputes with automated photo inspection</p>
-                    <p style="margin-top: 0.75rem; font-style: italic;">* Results based on industry data and customer reports. Your actual results may vary.</p>
+                    <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 1rem; text-align: center;">
+                        *Estimates based on industry averages.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Scalable Pricing</h2>
+                <p>Choose the plan that fits your fleet's maturity.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="price-card border-green">
+                    <div class="install-badge">✅ Self-Install Ready</div>
+                    <div class="segment-badge">For Fleet Security</div>
+                    <div class="plan-name">Essential</div>
+                    <div class="price">$5.99<span>/mo</span></div>
+                    <div class="price-sub">GPS Tracking & Theft Recovery</div>
+                    <hr>
+                    <ul class="price-features">
+                        <li><strong>Admin Portal & Dashboard</strong></li>
+                        <li><strong>GPS Tracking</strong> (Real-time)</li>
+                        <li><strong>Remote Immobilization</strong></li>
+                        <li><strong>Tint Insurance Compatible</strong></li>
+                    </ul>
+                    <button class="btn btn-secondary price-btn" onclick="openModal('Essential Plan')">Get Essential</button>
+                </div>
+
+                <div class="price-card border-teal">
+                    <div class="install-spacer"></div>
+                    <div class="segment-badge gold-badge">For Contactless Sharing</div>
+                    <div class="plan-name">Gold</div>
+                    <div class="price">$8.99<span>/mo</span></div>
+                    <div class="price-sub">Keyless Access & Automation</div>
+                    <hr>
+                    <ul class="price-features">
+                        <li style="font-style: italic; color: var(--navy-brand);">Everything in Essential, plus:</li>
+                        <li><strong>Keyless Lock/Unlock</strong> (Mobile)</li>
+                        <li><strong>Mob Admin App</strong> (Manager)</li>
+                        <li><strong>Bluetooth (BLE)</strong> Offline Access</li>
+                        <li><strong>Remote Immobilization</strong></li>
+                    </ul>
+                    <button class="btn btn-primary price-btn" onclick="openModal('Gold Plan')">Get Gold</button>
+                </div>
+
+                <div class="price-card border-navy">
+                    <div class="install-spacer"></div>
+                    <div class="segment-badge navy-badge">For Rental Companies</div>
+                    <div class="plan-name">Enterprise</div>
+                    <div class="price">$24.99<span>/mo</span></div>
+                    <div class="price-sub">Full Digital Rental Platform</div>
+                    <hr>
+                    <ul class="price-features">
+                        <li style="font-style: italic; color: var(--navy-brand);">Everything in Gold, plus:</li>
+                        <li><strong>Telemetry</strong> (Fuel, Odo, Battery, Alerts)</li>
+                        <li><strong>CRM</strong> (Reservation Mgmt)</li>
+                        <li><strong>Customer App</strong> (White-label/Web)</li>
+                        <li><strong>Payment Processing</strong></li>
+                    </ul>
+                    <button class="btn btn-secondary price-btn" onclick="openModal('Enterprise Plan')">Get Enterprise</button>
+                </div>
+            </div>
+
+            <div class="tint-banner">
+                <div class="tint-content">
+                    <div class="tint-icon">🛡️</div>
+                    <div class="tint-text">
+                        <h4>Are you a Turo Host?</h4>
+                        <p>All IturanMob plans (Essential, Gold, Enterprise) are fully compatible with <strong>Tint off-trip insurance</strong>. Protect your fleet 24/7, even when it's not rented.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 1rem; font-size: 0.9rem; color: var(--gray-medium);">
+                * Hardware cost not included. Professional installation recommended for Gold & Enterprise plans.
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
         <div class="container">
             <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
             </div>
-            <div class="faq-container">
+            <div class="faq-grid">
                 <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        <span>Do customers need to download an app?</span>
-                        <span class="faq-icon">▼</span>
-                    </div>
+                    <div class="faq-question">What's the difference between Essential, Gold, and Enterprise? <span class="faq-icon">+</span></div>
                     <div class="faq-answer">
-                        <p>You have three options: (1) White-label apps we provide (most common), (2) Integration into your existing app via our API, or (3) No-app solution where users access via web links sent by SMS/email.</p>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        <span>What's the difference between Light, Gold, and Full?</span>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p><strong>IturanMob Light:</strong> Basic tracking with daily location updates, perfect for basic fleet visibility and theft prevention.<br><br><strong>IturanMob Gold:</strong> Real-time tracking every 10 minutes, plus keyless entry and remote immobilization—ideal for professional operations.<br><br><strong>IturanMob Full:</strong> Complete platform with geofencing, telemetry, white-label apps, and integrated booking/CRM—designed for rental companies.</p>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        <span>How long does installation take?</span>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Installation time varies by device and vehicle type. Our team trains your technicians or recommended installers. Once trained, your team can install at scale.</p>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        <span>Can we use our own branding?</span>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! IturanMob Full is a white-label solution. The apps, dashboards, and customer communications all use your logo, colors, and branding.</p>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        <span>What vehicles are compatible?</span>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We support cars, motorcycles, scooters, vans, trucks, and buses. Our devices integrate with most vehicle types manufactured after 2010 with OBD-II ports or CAN bus access.</p>
-                    </div>
-                </div>
-                <div class="faq-item" onclick="toggleFAQ(this)">
-                    <div class="faq-question">
-                        <span>How does the Tint insurance work?</span>
-                        <span class="faq-icon">▼</span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>IturanMob is Tint-approved, making it compatible with off-trip car insurance for Turo hosts. This provides coverage when your vehicle is not actively rented, giving you complete protection for your fleet.</p>
+                        <p><strong>Essential:</strong> Focused on security. Includes GPS tracking, Admin Portal, and Remote Immobilization.<br>
+                        <strong>Gold:</strong> Focused on operations. Adds Keyless Lock/Unlock, offline Bluetooth, and the Manager App.<br>
+                        <strong>Enterprise:</strong> The complete platform. Adds a White-label Customer App, CRM, Payment Processing, and full Telemetry.</p>
                     </div>
                 </div>
                 
-                <!-- Hidden FAQs -->
-                <div id="more-faqs" style="display: none;">
-                    <div class="faq-item" onclick="toggleFAQ(this)">
-                        <div class="faq-question">
-                            <span>What's the difference between mobile app and web app?</span>
-                            <span class="faq-icon">▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>With IturanMob Full, you choose between:<br><br><strong>• Native Mobile App:</strong> iOS and Android apps with your branding in the App Store and Google Play. Best for customer-facing rental operations.<br><br><strong>• Web-Based App:</strong> Customers access via browser link (SMS/email), no download required. Perfect for corporate fleets or simplified operations.<br><br>Most rental companies choose native mobile apps for better customer experience, while corporate fleets often prefer the web-based option for simplicity.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" onclick="toggleFAQ(this)">
-                        <div class="faq-question">
-                            <span>What about international operations?</span>
-                            <span class="faq-icon">▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>IturanMob currently operates in 7 countries (US, Brazil, Mexico, Colombia, Ecuador, Argentina, Israel). We can support multi-country fleets with centralized management.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" onclick="toggleFAQ(this)">
-                        <div class="faq-question">
-                            <span>How secure is the system?</span>
-                            <span class="faq-icon">▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Military-grade security: VPN-encrypted 4G communication, AWS hosting with redundancy, multi-factor authentication, and optional integration with Ituran's stolen vehicle recovery service (world leader in SVR).</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" onclick="toggleFAQ(this)">
-                        <div class="faq-question">
-                            <span>Can we integrate with our existing systems?</span>
-                            <span class="faq-icon">▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Yes! We have API integrations with major rental ERPs (Locavia and others) and payment gateways (Stripe, Getnet, Pagar.me/Stone). Custom integrations available.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item" onclick="toggleFAQ(this)">
-                        <div class="faq-question">
-                            <span>How quickly can we launch?</span>
-                            <span class="faq-icon">▼</span>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Most clients launch within 4-8 weeks: 1 week for requirements, 2-3 weeks for device installation, 1-2 weeks for app customization and testing, 1 week for staff training. Expedited timelines available.</p>
-                        </div>
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">How long does installation take? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">
+                        <p>For the <strong>Essential</strong> plan, self-installation is quick and takes about 15-20 minutes. For <strong>Gold and Enterprise</strong> (which involve immobilization wiring), professional installation is required. The average installation time is approximately <strong>1 hour and 30 minutes</strong> per vehicle.</p>
                     </div>
                 </div>
-                
-                <div style="text-align: center; margin-top: 2rem;">
-                    <button onclick="toggleMoreFAQs()" id="faq-toggle-btn" style="background: transparent; border: 2px solid var(--turquoise); color: var(--turquoise); padding: 0.75rem 2rem; border-radius: 5px; font-weight: 600; cursor: pointer; transition: all 0.3s;">
-                        Show More Questions
-                    </button>
+
+                <div class="faq-item" onclick="toggleFAQ(this)">
+                    <div class="faq-question">Why is hardwired better than the OBD dongles I see elsewhere? <span class="faq-icon">+</span></div>
+                    <div class="faq-answer">OBD dongles are visible and can be unplugged by a thief in seconds. IturanMob devices are installed covertly inside the dashboard, making them undetectable and impossible to disarm without tools.</div>
                 </div>
+
+                <div id="faq-more" style="display: none;">
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">Do customers need to download an app? <span class="faq-icon">+</span></div>
+                        <div class="faq-answer">
+                            <p>For <strong>Enterprise</strong> clients, yes—we provide a white-label app (iOS/Android) or a web-based link. For <strong>Gold</strong>, you use the Admin App to generate access, while the end-user (driver) typically accesses the vehicle via a digital key link or bluetooth.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">Is this compatible with Turo off-trip insurance? <span class="faq-icon">+</span></div>
+                        <div class="faq-answer">Yes! All our plans are fully compatible with Tint insurance requirements. Our system provides the precise GPS tracking data needed to validate off-trip status for claims.</div>
+                    </div>
+
+                    <div class="faq-item" onclick="toggleFAQ(this)">
+                        <div class="faq-question">Can we use our own branding? <span class="faq-icon">+</span></div>
+                        <div class="faq-answer">Yes. The <strong>Enterprise</strong> plan is a fully white-label solution. The customer-facing mobile app and web booking portal will carry your logo and brand colors.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 2rem;">
+                <button id="faq-toggle-btn" class="btn btn-secondary" onclick="toggleMoreFAQs()">Show More Questions</button>
             </div>
         </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="final-cta" id="demo">
-        <div class="container">
-            <h2>Ready to Modernize Your Fleet?</h2>
-            <p>Join rental companies and fleet operators across the Americas who trust IturanMob. Schedule a 30-minute demo to see the platform in action.</p>
-            <div class="demo-form">
-                <h3>Schedule Your Demo</h3>
-                <form onsubmit="handleFormSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="company">Company:</label>
-                        <input type="text" id="company" name="company" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="fleet-size-form">Fleet Size:</label>
-                        <select id="fleet-size-form" name="fleet-size" required>
-                            <option value="">Select fleet size</option>
-                            <option value="1-10">1-10 vehicles</option>
-                            <option value="11-50">11-50 vehicles</option>
-                            <option value="51-100">51-100 vehicles</option>
-                            <option value="100+">100+ vehicles</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="submit-btn">Schedule Demo</button>
-                </form>
-                <div class="alt-contact">
-                    Or call us: <strong>(888) 555-0100</strong>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h4>Company</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Careers</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Partner with Ituran</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Solutions</h4>
-                <ul>
-                    <li><a href="#">Rental Companies</a></li>
-                    <li><a href="#">Corporate Fleets</a></li>
-                    <li><a href="#">OEM Test Drives</a></li>
-                    <li><a href="#">Subscriptions</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Resources</h4>
-                <ul>
-                    <li><a href="#">Documentation</a></li>
-                    <li><a href="#">Case Studies</a></li>
-                    <li><a href="#">API Reference</a></li>
-                    <li><a href="#">Support</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Contact</h4>
-                <p>IturanMob USA<br>
-                123 Innovation Drive<br>
-                Miami, FL 33131<br>
-                Phone: (888) 555-0100<br>
-                Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b0d9ded6dff0d9c4c5c2d1dedddfd29ed3dfdd">[email&#160;protected]</a></p>
-                <div class="social-links">
-                    <a href="#" class="social-icon">in</a>
-                    <a href="#" class="social-icon">f</a>
-                    <a href="#" class="social-icon">✉</a>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3 style="color:white; margin-bottom: 1rem;">ituran<span>mob</span></h3>
+                    <p>The joint venture between MobLab and Ituran. Bringing 30 years of vehicle recovery expertise to modern fleet sharing.</p>
+                </div>
+                <div>
+                    <h4>Solutions</h4>
+                    <ul>
+                        <li><a href="#">Rental Companies</a></li>
+                        <li><a href="#">Gig-Economy</a></li>
+                        <li><a href="#">Corporate Fleets</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>1700 NW 64th St,<br>Fort Lauderdale, FL 33309</p>
+                    <p><a href="mailto:salesmob@ituranusa.com" style="color:white;">salesmob@ituranusa.com</a></p>
                 </div>
             </div>
-        </div>
-        <div class="footer-bottom">
-            <div>© 2025 IturanMob USA. All rights reserved. | A joint venture of Ituran and MobLab</div>
-            <div class="legal-links">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
+            <div class="copyright">
+                &copy; 2025 IturanMob USA. All rights reserved.
             </div>
         </div>
     </footer>
 
-    <!-- INTEREST MODAL -->
-    <div id="interestModal" class="modal">
+    <div id="leadModal" class="modal">
         <div class="modal-content">
-            <span class="modal-close" onclick="closeInterestModal()">&times;</span>
-            <h2>Get Started with <span id="modalPlanName">IturanMob</span></h2>
-            <p class="modal-subtitle">Fill out the form below and our team will contact you within 24 hours.</p>
-            
-            <form id="interestForm" onsubmit="handleInterestSubmit(event)">
-                <input type="hidden" id="selectedPlan" name="selectedPlan">
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="firstName">First Name <span class="required">*</span></label>
-                        <input type="text" id="firstName" name="firstName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="lastName">Last Name <span class="required">*</span></label>
-                        <input type="text" id="lastName" name="lastName" required>
-                    </div>
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Request Demo</h2>
+            <p style="margin-bottom: 1.5rem; color: var(--gray-medium);">Tell us about your fleet so we can prepare the right solution.</p>
+            <form onsubmit="event.preventDefault(); alert('Lead Submitted! Sales will contact you.'); closeModal();">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Email</label>
+                    <input type="email" required style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px;">
                 </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="email">Email <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone <span class="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567" required>
-                    </div>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Fleet Size</label>
+                    <select style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px;">
+                        <option>1-10 Vehicles</option>
+                        <option>11-50 Vehicles</option>
+                        <option>50+ Vehicles</option>
+                    </select>
                 </div>
-                
-                <div class="form-group">
-                    <label for="company">Company Name <span class="required">*</span></label>
-                    <input type="text" id="company" name="company" required>
+                <div style="margin-bottom: 1rem;">
+                    <label style="display:block; margin-bottom:0.5rem; font-weight:600;">Primary Use Case</label>
+                    <select style="width: 100%; padding: 0.8rem; border: 1px solid #ccc; border-radius: 6px;">
+                        <option>Rental Company</option>
+                        <option>Gig-Economy / Turo</option>
+                        <option>Corporate Fleet</option>
+                        <option>Other</option>
+                    </select>
                 </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="fleetSize">Fleet Size <span class="required">*</span></label>
-                        <select id="fleetSize" name="fleetSize" required>
-                            <option value="">Select fleet size...</option>
-                            <option value="1-10">1-10 vehicles</option>
-                            <option value="11-30">11-30 vehicles</option>
-                            <option value="31-50">31-50 vehicles</option>
-                            <option value="51-100">51-100 vehicles</option>
-                            <option value="100+">100+ vehicles</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="currentSolution">Current Solution <span class="required">*</span></label>
-                        <select id="currentSolution" name="currentSolution" required>
-                            <option value="">Select current solution...</option>
-                            <option value="manual">Manual/Physical Keys</option>
-                            <option value="gps">GPS Tracker Only</option>
-                            <option value="competitor">Competitor Solution</option>
-                            <option value="none">No Solution Yet</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="timeline">Implementation Timeline <span class="required">*</span></label>
-                        <select id="timeline" name="timeline" required>
-                            <option value="">Select timeline...</option>
-                            <option value="asap">ASAP (within 1 month)</option>
-                            <option value="1-3">1-3 months</option>
-                            <option value="3-6">3-6 months</option>
-                            <option value="6+">6+ months</option>
-                            <option value="exploring">Just exploring</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="useCase">Primary Use Case <span class="required">*</span></label>
-                        <select id="useCase" name="useCase" required>
-                            <option value="">Select use case...</option>
-                            <option value="rental">Rental Company</option>
-                            <option value="corporate">Corporate Fleet</option>
-                            <option value="rideshare">Ride-share/Gig Economy</option>
-                            <option value="oem">OEM/Dealer Test Drives</option>
-                            <option value="other">Other</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-group">
-                    <label for="comments">Comments or Questions (Optional)</label>
-                    <textarea id="comments" name="comments" rows="3" placeholder="Tell us more about your needs..."></textarea>
-                </div>
-                
-                <div class="form-footer">
-                    <p class="form-privacy">
-                        🔒 We respect your privacy. Your information is secure and will only be used to contact you about IturanMob services.
-                    </p>
-                    <button type="submit" class="btn-primary btn-large">Submit Request</button>
-                    <p class="form-note">
-                        ✓ No credit card required<br>
-                        ✓ Our team will contact you within 24 hours
-                    </p>
-                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Request</button>
             </form>
         </div>
     </div>
 
-    <!-- SUCCESS MODAL -->
-    <div id="successModal" class="modal">
-        <div class="modal-content modal-success">
-            <span class="modal-close" onclick="closeSuccessModal()">&times;</span>
-            <div class="success-icon">✓</div>
-            <h2>Thank You!</h2>
-            <p class="success-message">
-                We've received your inquiry for <strong id="successPlanName">IturanMob</strong>.
-            </p>
-            <p>Our team will contact you within 24 hours to discuss:</p>
-            <ul class="success-list">
-                <li>Custom pricing for your fleet</li>
-                <li>Implementation timeline</li>
-                <li>Technical requirements</li>
-            </ul>
-            <p class="success-email">Check your email (<strong id="successEmail"></strong>) for a confirmation.</p>
-            <p class="success-contact">Questions? Call us: <strong>+1-XXX-XXX-XXXX</strong></p>
-            <button class="btn-primary" onclick="closeSuccessModal()">Close</button>
-        </div>
-    </div>
-
-    <!-- External JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
